@@ -15,6 +15,19 @@ function post_to_url(path, params, method) {
     document.body.appendChild(form);
     form.submit();
 }
+function ajax_post(path, params) {
+    var http = new XMLHttpRequest();
+    var param = "";
+    for(var key in params) {
+        param += '&'+key+'='+params[key];
+    }
+    http.open("POST", path, true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-length", param.length);
+    http.setRequestHeader("Connection", "close");
+    http.send(param);
+}
+
 function get_selection(){
     var txt = '';
     if (window.getSelection) {
@@ -27,5 +40,5 @@ function get_selection(){
     return txt;
 }
 var txt = get_selection();
-post_to_url("http://localhost/~chintown/service/t2s/t2s.php", {"s": txt}, 'POST');
+ajax_post("http://localhost/~chintown/service/t2s/t2s.php", {"s": txt});
 })()
