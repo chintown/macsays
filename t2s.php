@@ -22,7 +22,7 @@
 
 	$cmd = "say -f $fn";
 	echo "<!-- $cmd -->";
-	shell_exec($cmd);
+	shell_exec($cmd);//escapeshellarg
 
 	if (!DEBUG) {echo "<script>window.close();</script>";}
 ?>
