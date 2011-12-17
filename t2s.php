@@ -1,4 +1,5 @@
 <?php
+	define('DEBUG', 0);
 	function to_utf8($str){
 		return mb_convert_encoding($str,"UTF-8", "BIG5");
 	}
@@ -22,5 +23,6 @@
 	$cmd = "say -f $fn";
 	echo "<!-- $cmd -->";
 	shell_exec($cmd);
+
+	if (!DEBUG) {echo "<script>window.close();</script>";}
 ?>
-<script>window.close()</script>
