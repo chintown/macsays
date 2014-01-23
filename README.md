@@ -11,3 +11,7 @@ Usage
   4. copy the content `t2s.js` into a bookmark.
   5. surf on the web, select a paragraph of article and hit the bookmark to get the speech.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/chintown/macsays/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
